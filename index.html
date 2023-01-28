@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificado E4CC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0"
+        nonce="UFP0R3JW"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: left;
+            min-width: 1366px;
+
+        }
+
+        /* Certificado  */
+        .cert {
+            background-color: #fa6400;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 800px;
+            max-width: 1366px;
+        }
+
+        .body-cert {
+
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            background-color: #ffffff;
+            margin: 25px;
+            height: 95%;
+            width: 100%;
+        }
+
+        .body-cet-margin-outside {
+            border: 1px solid #000;
+            margin: 10px;
+            height: 96%;
+        }
+
+        .body-cet-margin-inside {
+            border: 1px solid #000;
+            margin: 10px;
+            height: 96%;
+        }
+
+        .star-cert {
+            color: #fa6400;
+            font-size: 35px;
+            letter-spacing: .4rem;
+            display: flex;
+            justify-content: center;
+            margin-left: 10px;
+            margin-bottom: 0px;
+        }
+
+        .title-certified {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            color: #232747;
+            padding: 0;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /* Checkbox */
+        label {
+            color: #fa6400;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .option-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            position: relative;
+            top: 13.33333px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            transition: all 0.15s ease-out 0s;
+            background: #ffffff;
+            border: 2px solid #fa6400;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 0.5rem;
+            outline: none;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .option-input:checked {
+            background: #fa6400;
+        }
+
+        .option-input:checked::before {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            content: '\f00c';
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Font Awesome 5 Free';
+        }
+
+        .h1-cert {
+            margin: 0px 0px 0px 35px;
+        }
+
+        .line-start {
+            margin-top: -20px;
+            text-align: center;
+            color: #232747;
+        }
+
+
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .level-complete {
+            font-family: system-ui;
+            color: #232747;
+            width: 60%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .name-student {
+            font-family: 'Petit Formal Script', cursive;
+            width: 80%;
+            border-bottom: 1px solid black;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .place-and-date {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .place {
+            width: 60%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .date {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline black;
+        }
+
+        .footer-cert {
+            display: flex;
+            justify-content: space-between;
+            /* margin-top: 0px; */
+        }
+
+        .img-firma-coordinador {
+            width: 150px;
+            font-weight: bold;
+            filter: brightness(1.1) contrast(1.9);
+            margin-bottom: -30px
+        }
+
+        .coordinador-academico {
+            width: 25%;
+            display: inline-block;
+            margin-right: 55px;
+            margin-top: 40px;
+        }
+
+        .div-img {
+            margin-left: 50px;
+            margin-top: -50px;
+        }
+
+        .name-coordinador {
+            border-top: 1px black solid;
+            text-align: center;
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .adv-footer {
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .compartir-certificado {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        .btn-facebook {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .btn-twitter {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .line-star {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 2em;
+            font-weight: bold;
+            color: #232747;
+            margin-top: -25px;
+            margin-bottom: 20px;
+        }
+
+        @media print {
+
+            .oculto-impresion,
+            .oculto-impresion * {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <!-- Metas para compartir post en facebook -->
+    <meta property="og:description" content="Lo he conseguido, he aprobado el nivel de B1 en E4CC" />
+    <meta property="og:image" content="https://e4cc-dev.com/Uploads/Img/Certified/Certificado_E4CC.png" />
+
+</head>
+
+
+<div class="compartir-certificado oculto-impresion">
+
+    <!-- Boton para compartir en facebook -->
+    <div class="btn-facebook">
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="http://e4ccsv.com/portal/Certificado/214030/B1"
+            data-layout="button" data-size="large"><a target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                class="fb-xfbml-parse-ignore">Compartir</a></div>
+    </div>
+
+    <!-- Boton para compartir en Twitter -->
+    <div class="btn-twitter">
+
+        <a href="http://e4ccsv.com/portal/Certificado/214030/B1" class="twitter-share-button"
+            data-size="large"
+            data-text="Lo he conseguido, he logrado avanzar de nivel B1 en E4CC  Mi Certificado: "
+            data-url="http://e4ccsv.com/portal/Certificado/214030/B1" data-hashtags="e4cccertified"
+            data-show-count="true">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+</div>
+
+<body class="container">
+
+
+    <!-- Certificado de nivel completado -->
+    <div class="cert">
+        <!-- Cuerpo del certificado -->
+        <div class="body-cert">
+
+            <div class="body-cet-margin-outside">
+                <!-- Contenido del certificado -->
+                <div class="body-cet-margin-inside">
+                    <div>
+
+                        <h3 class="star-cert">★★★★★</h3>
+                        <div class="title-certified">
+                            <h2 class="h1-cert"> CERTIFICATE OF ACHIEVEMENT</h2>
+                        </div>
+                        <div class="line-star">
+
+                            ——————— ★ ———————
+
+                        </div>
+
+
+
+                        <div class="flex-center">
+                            <div class="name-student">
+                                Octavio Cesar Perez Gonzalez
+                            </div>
+
+                        </div>
+                        <div class="place-and-date">
+                            <div class="place">
+                                EL SALVADOR,
+                                <span class="date"> JANUARY </span> OF
+                                <span class="date"> 2023 </span>. <br>
+                                <!-- <span style="margin-top:-50px; margin-left:140px; font-size:8px">(MONTH)</span>
+                                <span style="margin-top:-50px; margin-left:50px; font-size:8px">(YEAR)</span> -->
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="flex-center">
+                            <div class="level-complete">
+                                HAS SUCCESSFULLY COMPLETED.
+                            </div>
+
+                        </div>
+
+                        <div class="flex-center">
+                            <label>
+                                BASIC 1
+                                <input type="checkbox" class="option-input checkbox" checked disabled />
+
+                            </label>
+                            <label>
+                                BASIC 2
+                                <input type="checkbox" class="option-input checkbox" {{AprobadoB2}} disabled />
+
+                            </label>
+                            <label>
+                                BASIC 3
+                                <input type="checkbox" class="option-input checkbox" {{AprobadoB3}} disabled />
+
+                            </label>
+                            <label>
+                                BASIC 4
+                                <input type="checkbox" class="option-input checkbox" {{AprobadoB4}} disabled />
+
+                            </label>
+                            <label>
+                                INTERMEDIATE
+                                <input type="checkbox" class="option-input checkbox" {{AprobadoIN}} disabled />
+
+                            </label>
+
+                        </div>
+                        <br><br><br>
+
+                        <div class="footer-cert">
+                            <div class="coordinador-academico" style="display: inline-block; margin-left: 10px;">
+                                <div class="div-img">
+                                    <img class="img-firma-coordinador"
+                                        src="https://e4cc-dev.com/Uploads/Img/Certified/Firma_Rodrigo.png">
+                                </div>
+
+                                <div class="name-coordinador">
+                                    RODRIGO GALDAMEZ <br>
+                                    CEO E4CC
+                                </div>
+                            </div>
+                            <div class="coordinador-academico" style="display: inline-block;">
+                                <div class="div-img">
+                                    <img class="img-firma-coordinador"
+                                        src="https://e4cc-dev.com/Uploads/Img/Certified/Firma_katherine flores.png">
+                                </div>
+
+                                <div class="name-coordinador">
+                                    KATHERINE FLORES <br>
+                                    ACADEMIC MANAGER
+                                </div>
+                            </div>
+
+
+                            <div class="coordinador-academico" style="display: inline-block;">
+                                <div class="div-img">
+                                    <img class="img-firma-coordinador"
+                                        src="https://e4cc-dev.com/Uploads/Img/Certified/firma_coordinador_academico.png">
+                                </div>
+
+                                <div class="name-coordinador">
+                                    LETICIA MOLINA <br>
+                                    ACADEMIC COORDINATOR
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img src="https://e4cc-dev.com/Uploads/Img/Certified/logo_e4cc.png" style="width: 90%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <span class="adv-footer">
+                    THIS CERTIFICATION IS VALID FOR 2 MONTHS AFTER THE DAY THAT IT WAS GIVEN
+                </span>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
